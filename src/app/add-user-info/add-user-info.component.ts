@@ -66,7 +66,7 @@ export class AddUserInfoComponent implements OnInit {
       return;
     }
     let user: User = this.userForm.value;
-    user.id = 15;
+    user.id = Math.floor(Math.random() * 1000);
     user.userImage = CONSTANTS_DATA.DEFAULT_USER_IMAGE;
     this.userService.setUser(user);
     this.dialogRef.close();
