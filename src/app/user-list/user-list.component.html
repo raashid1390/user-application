@@ -1,0 +1,24 @@
+<div [ngClass]="{'col-md-12':!isUserSelected,'col-md-8':isUserSelected}" class="user-list-container">
+  <mat-card *ngFor="let user of userList" class="user-list">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-1">
+          <img [src]="user.userImage" class="user-image" />
+        </div>
+        <span class="col-md-5 user-name top-10" (click)="setSelectedUser(user)">
+          {{user.userName}}
+        </span>
+        <span class="col-md-4 top-10">
+          {{user.email}}
+        </span>
+        <span class="col-md-2 top-10">
+          {{user.organisationName}}
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div *ngIf="isUserSelected" class="col-md-4 user-info">
+  <app-user-info-card [selectedUser]="selectedUser" (close)="closeClick()"></app-user-info-card>
+</div>

@@ -1,0 +1,22 @@
+.user-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: #7b7b7b;
+    box-shadow: 1px 2px 2px #647cf3;
+}
+
+table{
+    width: 100%;
+}
+
+.user-detail-container{
+    margin-top: 10px;
+}
+
+.search-box{
+    top:-50px;
+    right:180px;
+    position: absolute;
+}

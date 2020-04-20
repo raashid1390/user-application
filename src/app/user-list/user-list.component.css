@@ -1,0 +1,40 @@
+.user-list-container {
+    margin-top: 10px;
+    overflow: auto;
+    height: calc(100% - 55px);
+}
+
+.user-list {
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.user-list:hover {
+    background-color: #ececec;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    margin:0 30px 0 15px;
+    border-radius: 20px;
+    background: #7b7b7b;
+    box-shadow: 1px 2px 2px #647cf3;
+}
+
+.user-name {
+    cursor: pointer;
+}
+
+.user-name:hover {
+    text-decoration: underline;
+}
+
+.user-info {
+    height: calc(100% - 55px);
+}
+
+.top-10{
+    top: 10px;
+}

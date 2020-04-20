@@ -1,0 +1,9 @@
+.user-image{
+    border-radius: 50%;
+    background: whitesmoke;
+    border: 5px;
+    border-color: #e8e8e8;
+    border-width: 10px;
+    border-style: solid;
+    box-shadow: 2px 2px 10px #c5c5c5;
+}

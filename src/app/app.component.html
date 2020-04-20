@@ -1,0 +1,63 @@
+<header class="header">
+  <mat-card color="primary" class="header-mat">
+    <img src="../favicon.ico" class="customer-logo" />
+    <span class="customer-heading">
+      User Application
+    </span>
+    <div class="pull-right">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>help_outline</mat-icon>
+          <span>Help</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-card>
+</header>
+<div class="content">
+  <div class="col-md-12">
+    <button mat-raised-button color="" class="pull-left menu-btn margin-right" routerLink="/user-list"
+      routerLinkActive="active">
+      <mat-icon>list</mat-icon>
+      <span>
+        User List
+      </span>
+    </button>
+
+    <button mat-raised-button color="" class="pull-left menu-btn margin-right" routerLink="/user-detail"
+      routerLinkActive="active">
+      <mat-icon>table_chart</mat-icon>
+      <span>
+        User Detail
+      </span>
+    </button>
+
+    <button mat-raised-button color="primary" class="pull-right add-user-btn " (click)="addUserDialog()">
+      <span>
+        <img src="../assets/images/add_circle-white-18dp.svg" class="add-user-icon" />
+      </span>
+      <span>
+        Add New User
+      </span>
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<footer class="footer">
+  <span>
+    © Raashid Akhtar, HCL. 2020
+  </span>
+  <span class="pull-right">
+    You agree to our
+    <i>
+      <u><a href="" class="white">Terms of Services</a></u>
+    </i>
+    and
+    <i>
+      <u><a class="white">Privacy Notice</a></u>
+    </i>
+  </span>
+</footer>

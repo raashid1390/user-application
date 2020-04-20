@@ -1,0 +1,70 @@
+<div>
+  <h1 mat-dialog-title>Add New User</h1>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <img src="../../assets/images/default.png" width="100%" height="100%" class="user-image" />
+  </div>
+  <div mat-dialog-content class="col-md-8">
+    <form [formGroup]="userForm">
+      <mat-form-field class="col-md-6">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="userName" required autocomplete="off">
+        <mat-error *ngIf="userForm.controls.userName.invalid">{{getErrorMessage('userName')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="username@example.com" required autocomplete="off">
+        <mat-error *ngIf="userForm.controls.email.invalid">{{getErrorMessage('email')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <input type="text" placeholder="Select State" matInput [matAutocomplete]="auto" formControlName="state" required
+          autocomplete="off">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="userForm.controls.state.invalid">{{getErrorMessage('state')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthdate" required autocomplete="off">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="userForm.controls.birthdate.invalid">{{getErrorMessage('birthdate')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <mat-label>Pincode</mat-label>
+        <input matInput formControlName="pincode" required autocomplete="off">
+        <mat-error *ngIf="userForm.controls.pincode.invalid">{{getErrorMessage('pincode')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <mat-label>Organization Name</mat-label>
+        <input matInput formControlName="organisationName" required autocomplete="off">
+        <mat-error *ngIf="userForm.controls.organisationName.invalid">{{getErrorMessage('organisationName')}}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6">
+        <mat-label>Skills</mat-label>
+        <mat-select formControlName="skills" multiple required>
+          <mat-option *ngFor="let skill of skillsList" [value]="skill">
+            {{skill}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="userForm.controls.skills.invalid">{{getErrorMessage('skills')}}
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+<div mat-dialog-actions class="pull-right">
+  <button mat-raised-button color="primary" class="pull-right" (click)="onAddClick()">Add</button>
+  <button mat-raised-button mat-button class="pull-right" (click)="onCancelClick()">Cancel</button>
+</div>

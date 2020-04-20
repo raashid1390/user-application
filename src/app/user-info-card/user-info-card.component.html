@@ -1,0 +1,63 @@
+<mat-card class="user-info-mat-card">
+  <div class="image-container">
+    <img class="image-profile" [src]="selectedUser.userImage" width="140px" height="140px" />
+    <div class="user-name">
+      <span class="">
+        {{selectedUser.userName}}
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-4 padding-bottom">
+        Email
+      </div>
+      <div class="col-md-8 padding-bottom">
+        <span class="font-weight-500">
+          {{selectedUser.email}}
+        </span>
+        <mat-icon class="pull-right user-info-icon">email</mat-icon>
+      </div>
+      <div class="col-md-4 padding-bottom">
+        Date of Birth
+      </div>
+      <div class="col-md-8 padding-bottom">
+        <span class="font-weight-500">
+          {{selectedUser.birthdate | date:'mediumDate'}}
+        </span>
+        <mat-icon class="pull-right user-info-icon">calendar_today</mat-icon>
+      </div>
+      <div class="col-md-4 padding-bottom">
+        State
+      </div>
+      <div class="col-md-8 padding-bottom">
+        <span class="font-weight-500">
+          {{selectedUser.state}}
+        </span>
+      </div>
+      <div class="col-md-4 padding-bottom">
+        Organization
+      </div>
+      <div class="col-md-8 padding-bottom">
+        <span class="font-weight-500">
+          {{selectedUser.organisationName}}
+        </span>
+      </div>
+      <div class="col-md-4 padding-bottom">
+        Skills
+      </div>
+      <div class="col-md-8 padding-bottom">
+        <mat-chip-list>
+          <mat-chip *ngFor="let skill of selectedUser.skills">
+            {{skill}}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+  <div class="btn-close">
+    <button mat-raised-button color="" class="full-width bg-color-white-smoke" (click)="closeClick()">
+      Close
+    </button>
+  </div>
+</mat-card>

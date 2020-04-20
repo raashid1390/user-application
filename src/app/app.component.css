@@ -1,0 +1,72 @@
+.header {
+    background-color: #cccccc;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+.header-mat{
+    border-radius: 0px;
+    background: #3e3e3e;
+    color: white;
+}
+
+.footer {
+    background-color: #3e3e3e;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    padding: 8px 15px;
+    font-size: 11px;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    z-index: 0;
+    height: calc(100% - 95px);
+    background-color: whitesmoke;
+    overflow-y: auto;
+}
+
+.customer-logo {
+    vertical-align: middle;
+}
+
+.customer-heading {
+    vertical-align: middle;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.menu-btn {
+    margin-top: 5px;
+}
+
+.add-user-btn {
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.add-user-icon {
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.active {
+    background-color: #ff4081;
+    color: white;
+}
+
+.white{
+    color: white;
+}
