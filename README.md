@@ -1,6 +1,6 @@
 # User Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+This is a POC to show user list and user details
 
 ## Development server
 
